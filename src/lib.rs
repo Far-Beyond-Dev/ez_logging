@@ -26,7 +26,7 @@ pub fn log_message(message: &str) {
 }
 
 #[macro_export]
-macro_rules! hlog {
+macro_rules! println {
     ($($arg:tt)*) => {{
         let message = format!($($arg)*);
         $crate::log_message(&message);
