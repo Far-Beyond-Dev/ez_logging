@@ -34,5 +34,5 @@ macro_rules! println {
 }
 
 pub fn init() {
-    hlog!("Logging system initialized");
+    println!("Logging system initialized");
 }
