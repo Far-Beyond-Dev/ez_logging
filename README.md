@@ -11,18 +11,11 @@
 
 ## Installation
 
-Add this to your `Cargo.toml`:
+Run `cargo add ez_logging`, or add the following to `Cargo.toml`
 
 ```toml
 [dependencies]
-ez_logging = { git = "https://github.com/yourusername/ez_logging.git" }
-```
-
-Or, if you're using it as a local dependency:
-
-```toml
-[dependencies]
-ez_logging = { path = "../ez_logging" }
+ez_logging = v0.1.1
 ```
 
 ## Usage
