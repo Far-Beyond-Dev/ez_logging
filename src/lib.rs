@@ -30,8 +30,10 @@ pub fn log_message(message: &str) {
 
     print!("{}", log_message);  // Print to console
 
-    if let Ok(mut file) = LOG_FILE.get().unwrap().lock() {
-        let _ = file.write_all(log_message.as_bytes());
+    if let Some(lock) = LOG_FILE.get() {
+        if let Ok(mut file) = lock.lock() {
+            let _ = file.write_all(log_message.as_bytes());
+        }
     }
 }
 
